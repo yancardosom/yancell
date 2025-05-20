@@ -4,11 +4,12 @@ Bem-vindo ao repositório oficial do **site da Yan Cell Assistec** — assistên
 
 ## 🛠️ Funcionalidades
 
-- 🛍️ Catálogo de produtos (capinhas, películas, carregadores, fones e mais)
+- 🛍️ Catálogo de produtos e serviços com seleção de múltiplos itens e quantidades
 - 💬 Atendimento e pedidos via WhatsApp
 - 💳 Pagamento por Pix direto pelo site
 - 🛒 Carrinho de compras simples e funcional
 - 📱 Design responsivo para celular e desktop
+- 🔎 Navegação por seções (Produtos, Sobre, Contato) em containers interativos
 
 ## 🚀 Tecnologias utilizadas
 

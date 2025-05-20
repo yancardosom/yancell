@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, #1f1f1f, #333);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header img {
+  height: auto;
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  max-width: 80%;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  color: #828c93;
+  margin-bottom: 20px;
+}
+
+.produto {
+  background: linear-gradient(120deg, #232526 0%, #2c3e50 100%);
+  border-radius: 12px;
+  padding: 24px 18px;
+  min-width: 270px;
+  max-width: 320px;
+  flex: 1 1 270px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  margin-bottom: 0;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: 1.5px solid #232526;
+  position: relative;
+}
+
+.produto:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+  border-color: #2ecc40;
+}
+
+.produto h3 {
+  margin-bottom: 12px;
+  color: #2ecc40;
+  font-size: 1.25em;
+  letter-spacing: 0.5px;
+}
+
+.produto-opcoes label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: normal;
+  color: #e0e0e0;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.produto-adicionar {
+  margin-top: 10px;
+  background: #2ecc40;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.produto-adicionar:hover {
+  background: #27ae38;
+}
+
+.carrinho {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.carrinho h3 {
+  margin-bottom: 10px;
+}
+
+.carrinho ul {
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+a {
+  color: #828c93;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.container-section {
+  display: none;
+  animation: fadeIn 0.5s;
+}
+
+.container-section.active {
+  display: block;
+}
+
+.home-banner {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.home-banner h2 {
+  font-size: 2.2em;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.home-banner p {
+  font-size: 1.2em;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.home-banner img {
+  width: 120px;
+  margin: 20px 0 0 0;
+  filter: drop-shadow(0 2px 8px #0008);
+}
+
+.home-btn {
+  background: #2ecc40;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.home-btn:hover {
+  background: #27ae38;
+}
+
+.produto-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.sobre-container {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  border-radius: 14px;
+  padding: 36px 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  color: #e0e0e0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobre-container h2 {
+  color: #2ecc40;
+  margin-bottom: 18px;
+}
+
+.sobre-container h3 {
+  color: #fff;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.sobre-equipe {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.sobre-equipe img {
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid #2ecc40;
+  box-shadow: 0 2px 8px #0004;
+}
+
+.contato-container {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  border-radius: 14px;
+  padding: 36px 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  color: #e0e0e0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contato-container h2 {
+  color: #2ecc40;
+  margin-bottom: 18px;
+}
+
+.contato-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+}
+
+.contato-lista li {
+  margin-bottom: 14px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contato-lista svg {
+  width: 22px;
+  height: 22px;
+  fill: #2ecc40;
+  flex-shrink: 0;
+}
+
+.contato-social {
+  margin-top: 18px;
+}
+
+.contato-social a {
+  color: #2ecc40;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 18px;
+  font-size: 1.1em;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contato-social a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .produto-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-banner {
+    padding: 24px 8px;
+  }
+
+  .sobre-container,
+  .contato-container {
+    padding: 18px 6px;
+  }
+}
+
+.pix-finalizar-container {
+  display: none;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 2px 16px #0004;
+}
+
+.pix-finalizar-container.active {
+  display: block;
+}

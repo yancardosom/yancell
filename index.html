@@ -1,367 +1,283 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yan Cell Assistec</title>
-  <link rel="icon" href="logofinal.png" type="image/png" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212; 
-      color: #e0e0e0; 
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(90deg, #1f1f1f, #333); 
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    header img {
-  height: auto;
-  width: 160px;
-  margin-bottom: 10px;
-}
-
-
-    nav ul {
-      list-style: none;
-      margin-top: 15px;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #828c93; 
-      margin-bottom: 20px;
-    }
-
-    .produto {
-      background-color: #1e1e1e; 
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
-    }
-
-    .produto h3 {
-      margin-bottom: 15px;
-      color: #e0e0e0;
-    }
-
-    .produto label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: normal;
-    }
-
-    button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background-color: #555;
-    }
-
-    .carrinho {
-      background: #1e1e1e;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 20px;
-      margin-top: 30px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
-    }
-
-    .carrinho h3 {
-      margin-bottom: 10px;
-    }
-
-    .carrinho ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      background-color: #1a1a1a;
-      color: #ccc;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9em;
-      margin-top: 40px;
-    }
-
-    a {
-      color: #828c93;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      nav ul li {
-        display: block;
-        margin: 10px 0;
-      }
-    }
-
-    @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.fade-out {
-  animation: fadeOut 0.4s ease-in-out;
-}
-
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-  </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Yan Cell Assistec</title>
+	<link rel="icon" href="assets/img/logo.webp" type="image/png" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
+	<header class="bg-dark text-white text-center py-4">
+		<img src="assets/img/logo.webp" alt="Logo da Yan Cell Assistec" style="width:140px; margin-bottom:0px;" />
+		<nav>
+			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
+						onclick="mostrarSecao('home')">Home</a>
+				</li>
+				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
+						onclick="mostrarSecao('produtos')">Produtos</a></li>
+				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
+						onclick="mostrarSecao('sobre')">Sobre
+						Nós</a></li>
+				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
+						onclick="mostrarSecao('contato')">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
 
-  <header>
-    <img src="logofinal.png" alt="Logo da Yan Cell Assistec" />
-    <h1>Bem-vindo à Yan Cell Assistec</h1>
-    <nav>
-      <ul>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+	<main class="container mt-4 mb-5">
+		<section id="home" class="container-section active">
+			<div class="home-banner card text-center bg-dark text-light p-4 mb-4">
+				<h2 class="mb-3">Bem-vindo à Yan Cell Assistec</h2>
+				<p>
+					Soluções rápidas e confiáveis para seu smartphone, notebook ou dispositivo Apple.<br>
+					Peças originais, atendimento personalizado e pagamento facilitado.<br>
+					<b>Seu aparelho novo de novo!</b>
+				</p>
+				<button class="btn btn-success btn-lg mt-3" onclick="mostrarSecao('produtos')">Ver Produtos &
+					Serviços</button>
+			</div>
+		</section>
 
-  <main>
-    <section id="produtos">
-      <h2>Nossos Serviços</h2>
+		<section id="produtos" class="container-section">
+			<h2 class="text-center text-success mb-4">Nossos Serviços & Produtos</h2>
+			<div class="row g-4">
+				<div class="col-4">
+					<div class="produto card bg-dark text-light h-100">
+						<div class="card-body">
+							<h3 class="card-title text-success">Smartphone Android</h3>
+							<div class="produto-opcoes mb-2">
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Smartphone Android" value="Diagnóstico" id="androidDiag">
+									<label class="form-check-label" for="androidDiag">Diagnóstico</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Smartphone Android" value="Atualização de Software"
+										id="androidAtualiza">
+									<label class="form-check-label" for="androidAtualiza">Atualização de
+										Software</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Smartphone Android" value="Troca de Peças" id="androidTroca">
+									<label class="form-check-label" for="androidTroca">Troca de Peças</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Smartphone Android" value="Orçamento" id="androidOrc">
+									<label class="form-check-label" for="androidOrc">Orçamentos</label>
+								</div>
+							</div>
+							<div class="input-group mb-1 mt-3" style="width: 100%;">
+								<span class="input-group-text bg-success text-white border-success">Quantidade</span>
+								<input type="number" min="1" value="1"
+									class="form-control produto-quantidade border-success"
+									data-produto="Smartphone Android">
+							</div>
+							<button class="btn btn-success mt-1 produto-adicionar w-100"
+								onclick="adicionarAoCarrinhoMelhorado('Smartphone Android')">Adicionar ao
+								Carrinho</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="produto card bg-dark text-light h-100">
+						<div class="card-body">
+							<h3 class="card-title text-success">Aparelhos Apple</h3>
+							<div class="produto-opcoes mb-2">
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Aparelhos Apple" value="Diagnóstico" id="appleDiag">
+									<label class="form-check-label" for="appleDiag">Diagnóstico</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Aparelhos Apple" value="Atualização de iOS" id="appleAtualiza">
+									<label class="form-check-label" for="appleAtualiza">Atualização de iOS</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Aparelhos Apple" value="Troca de Peças" id="appleTroca">
+									<label class="form-check-label" for="appleTroca">Troca de Peças</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Aparelhos Apple" value="Orçamento" id="appleOrc">
+									<label class="form-check-label" for="appleOrc">Orçamentos</label>
+								</div>
+							</div>
+							<div class="input-group mb-1 mt-3" style="width: 100%;">
+								<span class="input-group-text bg-success text-white border-success">Quantidade</span>
+								<input type="number" min="1" value="1"
+									class="form-control produto-quantidade border-success"
+									data-produto="Aparelhos Apple">
+							</div>
+							<button class="btn btn-success mt-1 produto-adicionar w-100"
+								onclick="adicionarAoCarrinhoMelhorado('Aparelhos Apple')">Adicionar ao Carrinho</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="produto card bg-dark text-light h-100">
+						<div class="card-body">
+							<h3 class="card-title text-success">Notebooks</h3>
+							<div class="produto-opcoes mb-2">
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Notebooks" value="Diagnóstico" id="noteDiag">
+									<label class="form-check-label" for="noteDiag">Diagnóstico</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Notebooks" value="Atualização de Software" id="noteAtualiza">
+									<label class="form-check-label" for="noteAtualiza">Atualização de Software</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Notebooks" value="Pacote Office / Antivírus" id="noteOffice">
+									<label class="form-check-label" for="noteOffice">Pacote Office ou Antivírus</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input opcao-produto" type="checkbox"
+										data-produto="Notebooks" value="Orçamento" id="noteOrc">
+									<label class="form-check-label" for="noteOrc">Orçamentos</label>
+								</div>
+							</div>
+							<div class="input-group mb-1 mt-3" style="width: 100%;">
+								<span class="input-group-text bg-success text-white border-success">Quantidade</span>
+								<input type="number" min="1" value="1"
+									class="form-control produto-quantidade border-success"
+									data-produto="Notebooks">
+							</div>
+							<button class="btn btn-success mt-1 produto-adicionar w-100"
+								onclick="adicionarAoCarrinhoMelhorado('Notebooks')">Adicionar ao Carrinho</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carrinho card bg-dark text-light mt-4">
+				<div class="card-body">
+					<h3 class="card-title">Itens no Carrinho:</h3>
+					<ul id="lista-carrinho" class="mb-3"></ul>
+					<button class="btn btn-outline-danger" onclick="limparCarrinho()">Limpar Tudo</button>
+				</div>
+			</div>
+			<div class="text-center mt-4">
+				<button class="btn btn-success btn-lg me-2" onclick="finalizarPagamento()">Finalizar Pedido via
+					WhatsApp</button>
+				<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#pixModal">Pagamento via
+					Pix</button>
+			</div>
+		</section>
 
-      <div class="produto">
-        <h3>Smartphone Android</h3>
-        <label><input type="checkbox" name="android" value="Diagnóstico Android"> Diagnóstico</label>
-        <label><input type="checkbox" name="android" value="Atualização de Software Android"> Atualização de Software</label>
-        <label><input type="checkbox" name="android" value="Troca de Peças Android"> Troca de Peças</label>
-        <label><input type="checkbox" name="android" value="Orçamento Android"> Orçamentos</label>
-        <button onclick="adicionarAoCarrinho('android')">Adicionar ao Carrinho</button>
-      </div>
+		<section id="sobre" class="container-section">
+			<div class="sobre-container card bg-dark text-light p-4 mb-4 mx-auto" style="max-width:700px;">
+				<h2 class="text-success mb-3">Sobre Nós</h2>
+				<p>
+					A <b>Yan Cell Assistec</b> nasceu da paixão por tecnologia e do compromisso com o cliente.<br>
+					Somos referência em assistência técnica de celulares, notebooks e dispositivos Apple em Sergipe.<br>
+					Trabalhamos com peças originais, diagnósticos precisos e atendimento transparente.<br>
+					<br>
+					<b>Missão:</b> Garantir que você tenha sempre a tecnologia funcionando perfeitamente, com agilidade
+					e
+					confiança.<br>
+					<b>Visão:</b> Ser reconhecida como a melhor assistência técnica da região.<br>
+					<b>Valores:</b> Ética, respeito, inovação e excelência no atendimento.
+				</p>
+				<h3 class="mt-4">Nossa Equipe</h3>
+				<div class="sobre-equipe d-flex align-items-center gap-3 mt-2">
+					<img src="assets/img/1687448014424.jpeg" alt="Técnico Yan"
+						class="rounded-circle border border-success" style="width:60px;">
+					<div>
+						<b>Yan Cardoso</b><br>
+						Técnico especialista em smartphones e notebooks<br>
+						+7 anos de experiência em tecnologia
+					</div>
+				</div>
+				<div class="sobre-equipe d-flex align-items-center gap-3 mt-2">
+					<img src="assets/img/logo.webp" alt="Atendimento" class="rounded-circle border border-success"
+						style="width:60px;">
+					<div>
+						<b>Equipe de Atendimento</b><br>
+						Prontos para tirar dúvidas e agilizar seu pedido!
+					</div>
+				</div>
+			</div>
+		</section>
 
-      <div class="produto">
-        <h3>Aparelhos Apple</h3>
-        <label><input type="checkbox" name="apple" value="Diagnóstico Apple"> Diagnóstico</label>
-        <label><input type="checkbox" name="apple" value="Atualização de iOS"> Atualização de iOS</label>
-        <label><input type="checkbox" name="apple" value="Troca de Peças Apple"> Troca de Peças</label>
-        <label><input type="checkbox" name="apple" value="Orçamento Apple"> Orçamentos</label>
-        <button onclick="adicionarAoCarrinho('apple')">Adicionar ao Carrinho</button>
-      </div>
+		<section id="contato" class="container-section">
+			<div class="contato-container card bg-dark text-light p-4 mb-4 mx-auto" style="max-width:700px;">
+				<h2 class="text-success mb-3">Contato</h2>
+				<ul class="contato-lista list-unstyled mb-3">
+					<li class="mb-2">
+						<i class="bi bi-envelope-fill text-success me-2"></i>
+						<a href="mailto:Yancell@outlook.com.br"
+							class="text-light text-decoration-none">Yancell@outlook.com.br</a>
+					</li>
+					<li class="mb-2">
+						<i class="bi bi-telephone-fill text-success me-2"></i>
+						<a href="tel:+5579991193477" class="text-light text-decoration-none">(79) 9 9119-3477</a>
+					</li>
+				</ul>
+				<div class="contato-social mb-3">
+					<a href="https://instagram.com/yancelltec" target="_blank" title="Instagram"
+						class="me-3 text-success fs-5">
+						<i class="bi bi-instagram"></i> Instagram
+					</a>
+					<a href="https://wa.me/5579996268137" target="_blank" title="WhatsApp"
+						class="me-3 text-success fs-5">
+						<i class="bi bi-whatsapp"></i> WhatsApp
+					</a>
+					<a href="https://www.linkedin.com/company/yan-cell-assistec/" target="_blank" title="LinkedIn"
+						class="text-success fs-5">
+						<i class="bi bi-linkedin"></i> LinkedIn
+					</a>
+				</div>
+				<div class="mt-3" style="color:#b0ffb0; font-size:1.05em;">
+					Atendimento rápido via WhatsApp ou redes sociais.<br>
+					Horário: Seg a Sex, 8h às 18h | Sáb, 8h às 12h
+				</div>
+			</div>
+		</section>
 
-      <div class="produto">
-        <h3>Notebooks</h3>
-        <label><input type="checkbox" name="notebook" value="Diagnóstico Notebook"> Diagnóstico</label>
-        <label><input type="checkbox" name="notebook" value="Atualização de Software Notebook"> Atualização de Software</label>
-        <label><input type="checkbox" name="notebook" value="Pacote Office / Antivírus"> Pacote Office ou Antivírus</label>
-        <label><input type="checkbox" name="notebook" value="Orçamento Notebook"> Orçamentos</label>
-        <button onclick="adicionarAoCarrinho('notebook')">Adicionar ao Carrinho</button>
-      </div>
+		<!-- Modal Pix Bootstrap -->
+		<div class="modal fade" id="pixModal" tabindex="-1" aria-labelledby="pixModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-dark text-light">
+					<div class="modal-header border-0">
+						<h3 class="modal-title" id="pixModalLabel">Pagamento via Pix</h3>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+							aria-label="Fechar"></button>
+					</div>
+					<div class="modal-body text-center">
+						<p>Escaneie o QR Code abaixo ou copie o código Pix:</p>
+						<img src="assets/img/pix.webp" alt="QR Code Pix" style="width: 200px; margin: 15px 0;" />
+						<input type="text" id="codigoPix" value="SUA CHAVE PIX" readonly
+							class="form-control mb-2 bg-dark text-light" style="width: 90%; display:inline-block;" />
+						<button class="btn btn-outline-success mb-2" onclick="copiarCodigoPix()">Copiar Código
+							Pix</button>
+						<p class="mt-2">Após o pagamento, envie o comprovante para nosso WhatsApp para agilizar o
+							atendimento.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
-      <div class="carrinho" id="carrinho">
-        <h3>Itens no Carrinho:</h3>
-        <ul id="lista-carrinho"></ul>
-        <button onclick="limparCarrinho()">Limpar Tudo</button>
-       
-        
-      </div>
-      <button onclick="finalizarPagamento()">Finalizar Pedido com Pagamento</button>
-      <button onclick="abrirPagamentoPix()">Pagamento via Pix</button>
-      
-    </section>
+	<footer class="bg-dark text-center text-light py-3 mt-4 fixed-bottom">
+		<p class="mb-0">&copy; 2025 Yan Cell Assistec. Todos os direitos reservados.</p>
+	</footer>
 
-    <section id="sobre">
-      <h2>Sobre Nós</h2>
-      <p>Bem-vindo à Yan Cell Assistec, sua referência em assistência técnica e soluções tecnológicas!</p>
-      <p>Nossa missão é garantir que você tenha sempre a tecnologia funcionando perfeitamente.</p>
-      <h3>Nossa Equipe</h3>
-      <p>Profissionais qualificados com anos de experiência em tecnologia.</p>
-    </section>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/script.js"></script>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Email: <a href="mailto:Yancell@outlook.com.br">Yancell@outlook.com.br</a></p>
-      <p>Telefone: (79)9 9119-3477</p>
-      <p>Instagram: <a href="https://instagram.com/yancelltec" target="_blank">@yancelltec</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 Yan Cell Assistec. Todos os direitos reservados.</p>
-    <div id="pixPagamento" style="display: none; padding: 20px; background: #1e1e1e; border-radius: 8px; margin: 20px auto; max-width: 600px; text-align: center;">
-      <h3>Pagamento via Pix</h3>
-      <p>Escaneie o QR Code abaixo ou copie o código Pix:</p>
-      <img src="qrcode_pix.png" alt="QR Code Pix" style="width: 200px; margin: 15px 0;" />
-      <input type="text" id="codigoPix" value="00020126580014BR.GOV.BCB.PIX0114seuemail@pix.com5204000053039865405100.005802BR5925Yan Cell Assistec6009Sergipe62070503***6304ABCD" readonly style="width: 90%; padding: 10px; border-radius: 5px; background: #2a2a2a; color: #fff; border: none; margin-bottom: 10px;" />
-      <br>
-      <button onclick="copiarCodigoPix()">Copiar Código Pix</button>
-      
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
-      <h4>Finalizar Pagamento via Pix</h4>
-      <img src="qrcode_pix_yancell3.jpeg" alt="QR Code Pix" style="max-width: 200px; margin: 10px auto; display: block;" />
-      <p>Escaneie o QR Code acima com seu aplicativo bancário para concluir o pagamento.</p>
-      <button onclick="alert('Obrigado! Após o pagamento, entre em contato para confirmar.')">Finalizar Pagamento</button>
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      carregarCarrinhoDoLocalStorage();
-    });
-
-    function adicionarAoCarrinho(nomeGrupo) {
-      const opcoes = document.getElementsByName(nomeGrupo);
-      const lista = document.getElementById("lista-carrinho");
-
-      for (const opcao of opcoes) {
-        if (opcao.checked) {
-          const valor = opcao.value;
-
-          const itens = lista.getElementsByTagName("li");
-          let jaExiste = false;
-          for (const item of itens) {
-            if (item.textContent === valor) {
-              jaExiste = true;
-              break;
-            }
-          }
-
-          if (!jaExiste) {
-            const item = document.createElement("li");
-            item.textContent = valor;
-            item.classList.add("fade-in");
-
-            item.onclick = function () {
-              lista.removeChild(item);
-              salvarCarrinhoNoLocalStorage();
-            };
-
-            lista.appendChild(item);
-          }
-        }
-      }
-
-      salvarCarrinhoNoLocalStorage();
-    }
-
-    function limparCarrinho() {
-  if (confirm("Você tem certeza que deseja limpar o carrinho?")) {
-    const lista = document.getElementById("lista-carrinho");
-    lista.innerHTML = "";
-    salvarCarrinhoNoLocalStorage();
-  }
-}
-
-    function salvarCarrinhoNoLocalStorage() {
-      const lista = document.getElementById("lista-carrinho");
-      const itens = lista.getElementsByTagName("li");
-      const valores = [];
-
-      for (const item of itens) {
-        valores.push(item.textContent);
-      }
-
-      localStorage.setItem("carrinho", JSON.stringify(valores));
-    }
-
-    function carregarCarrinhoDoLocalStorage() {
-      const lista = document.getElementById("lista-carrinho");
-      const dados = localStorage.getItem("carrinho");
-      if (dados) {
-        const valores = JSON.parse(dados);
-        for (const valor of valores) {
-          const item = document.createElement("li");
-          item.textContent = valor;
-          item.classList.add("fade-in");
-
-          item.onclick = function () {
-            lista.removeChild(item);
-            salvarCarrinhoNoLocalStorage();
-          };
-
-          lista.appendChild(item);
-        }
-      }
-    }
-    function finalizarPagamento() {
-  const lista = document.getElementById("lista-carrinho");
-  const itens = [...lista.getElementsByTagName("li")].map(item => item.textContent).join('\n');
-
-  if (itens.length === 0) {
-    alert("Seu carrinho está vazio.");
-    return;
-  }
-
-  const mensagem = encodeURIComponent(`Olá! Gostaria de contratar os seguintes serviços:\n${itens}\n\nComo posso realizar o pagamento?`);
-const numero = "5579996268137"; 
-window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
-
-}
-function abrirPagamentoPix() {
-  const lista = document.getElementById("lista-carrinho");
-  if (lista.children.length === 0) {
-    alert("Adicione itens ao carrinho antes de prosseguir com o pagamento.");
-    return;
-  }
-
-  document.getElementById("pixPagamento").style.display = "block";
-  document.getElementById("pixPagamento").scrollIntoView({ behavior: "smooth" });
-}
-
-function copiarCodigoPix() {
-  const input = document.getElementById("codigoPix");
-  input.select();
-  input.setSelectionRange(0, 99999); // Compatível com mobile
-  document.execCommand("copy");
-  alert("Código Pix copiado para a área de transferência.");
-}
-
-  </script>
 </body>
+
 </html>
