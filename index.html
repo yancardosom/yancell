@@ -13,44 +13,43 @@
 
 <body>
 	<header class="bg-dark text-white text-center py-4">
-		<img src="assets/img/logo.webp" alt="Logo da Yan Cell Assistec" style="width:140px; margin-bottom:0px;" />
+		<img src="assets/img/logo.webp" alt="Logo da Yan Cell Assistec" style="width:120px; margin-bottom:0px;"
+			class="img-fluid" />
 		<nav>
-			<ul class="nav justify-content-center">
+			<ul class="nav justify-content-center flex-wrap">
 				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
-						onclick="mostrarSecao('home')">Home</a>
-				</li>
+						onclick="mostrarSecao('home')">Home</a></li>
 				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
 						onclick="mostrarSecao('produtos')">Produtos</a></li>
 				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
-						onclick="mostrarSecao('sobre')">Sobre
-						Nós</a></li>
+						onclick="mostrarSecao('sobre')">Sobre Nós</a></li>
 				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
 						onclick="mostrarSecao('contato')">Contato</a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<main class="container mt-4 mb-5">
+	<main class="container-fluid px-1 px-md-3 mt-3 mb-5">
 		<section id="home" class="container-section active">
-			<div class="home-banner card text-center bg-dark text-light p-4 mb-4">
-				<h2 class="mb-3">Bem-vindo à Yan Cell Assistec</h2>
-				<p>
+			<div class="home-banner card text-center bg-dark text-light p-3 p-md-4 mb-4">
+				<h2 class="mb-3 fs-3 fs-md-2">Bem-vindo à Yan Cell Assistec</h2>
+				<p class="fs-6 fs-md-5">
 					Soluções rápidas e confiáveis para seu smartphone, notebook ou dispositivo Apple.<br>
 					Peças originais, atendimento personalizado e pagamento facilitado.<br>
 					<b>Seu aparelho novo de novo!</b>
 				</p>
-				<button class="btn btn-success btn-lg mt-3" onclick="mostrarSecao('produtos')">Ver Produtos &
-					Serviços</button>
+				<button class="btn btn-success btn-lg mt-3 w-100 w-md-auto" onclick="mostrarSecao('produtos')">Ver
+					Produtos & Serviços</button>
 			</div>
 		</section>
 
 		<section id="produtos" class="container-section">
-			<h2 class="text-center text-success mb-4">Nossos Serviços & Produtos</h2>
+			<h2 class="text-center text-success mb-4 fs-4">Nossos Serviços & Produtos</h2>
 			<div class="row g-4">
-				<div class="col-4">
+				<div class="col-12 col-md-4">
 					<div class="produto card bg-dark text-light h-100">
 						<div class="card-body">
-							<h3 class="card-title text-success">Smartphone Android</h3>
+							<h3 class="card-title text-success fs-5">Smartphone Android</h3>
 							<div class="produto-opcoes mb-2">
 								<div class="form-check">
 									<input class="form-check-input opcao-produto" type="checkbox"
@@ -87,10 +86,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-md-4">
 					<div class="produto card bg-dark text-light h-100">
 						<div class="card-body">
-							<h3 class="card-title text-success">Aparelhos Apple</h3>
+							<h3 class="card-title text-success fs-5">Aparelhos Apple</h3>
 							<div class="produto-opcoes mb-2">
 								<div class="form-check">
 									<input class="form-check-input opcao-produto" type="checkbox"
@@ -124,10 +123,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-md-4">
 					<div class="produto card bg-dark text-light h-100">
 						<div class="card-body">
-							<h3 class="card-title text-success">Notebooks</h3>
+							<h3 class="card-title text-success fs-5">Notebooks</h3>
 							<div class="produto-opcoes mb-2">
 								<div class="form-check">
 									<input class="form-check-input opcao-produto" type="checkbox"
@@ -153,8 +152,7 @@
 							<div class="input-group mb-1 mt-3" style="width: 100%;">
 								<span class="input-group-text bg-success text-white border-success">Quantidade</span>
 								<input type="number" min="1" value="1"
-									class="form-control produto-quantidade border-success"
-									data-produto="Notebooks">
+									class="form-control produto-quantidade border-success" data-produto="Notebooks">
 							</div>
 							<button class="btn btn-success mt-1 produto-adicionar w-100"
 								onclick="adicionarAoCarrinhoMelhorado('Notebooks')">Adicionar ao Carrinho</button>
@@ -164,21 +162,22 @@
 			</div>
 			<div class="carrinho card bg-dark text-light mt-4">
 				<div class="card-body">
-					<h3 class="card-title">Itens no Carrinho:</h3>
+					<h3 class="card-title fs-5">Itens no Carrinho:</h3>
 					<ul id="lista-carrinho" class="mb-3"></ul>
-					<button class="btn btn-outline-danger" onclick="limparCarrinho()">Limpar Tudo</button>
+					<button class="btn btn-outline-danger w-100 w-md-auto" onclick="limparCarrinho()">Limpar
+						Tudo</button>
 				</div>
 			</div>
-			<div class="text-center mt-4">
-				<button class="btn btn-success btn-lg me-2" onclick="finalizarPagamento()">Finalizar Pedido via
-					WhatsApp</button>
-				<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#pixModal">Pagamento via
-					Pix</button>
+			<div class="text-center mt-4 d-grid gap-2 d-md-flex justify-content-md-center">
+				<button class="btn btn-success btn-lg me-md-2 w-100 w-md-auto" onclick="finalizarPagamento()">Finalizar
+					Pedido via WhatsApp</button>
+				<button class="btn btn-primary btn-lg w-100 w-md-auto" data-bs-toggle="modal"
+					data-bs-target="#pixModal">Pagamento via Pix</button>
 			</div>
 		</section>
 
 		<section id="sobre" class="container-section">
-			<div class="sobre-container card bg-dark text-light p-4 mb-4 mx-auto" style="max-width:700px;">
+			<div class="sobre-container card bg-dark text-light p-3 p-md-4 mb-4 mx-auto" style="max-width:700px;">
 				<h2 class="text-success mb-3">Sobre Nós</h2>
 				<p>
 					A <b>Yan Cell Assistec</b> nasceu da paixão por tecnologia e do compromisso com o cliente.<br>
@@ -213,7 +212,7 @@
 		</section>
 
 		<section id="contato" class="container-section">
-			<div class="contato-container card bg-dark text-light p-4 mb-4 mx-auto" style="max-width:700px;">
+			<div class="contato-container card bg-dark text-light p-3 p-md-4 mb-4 mx-auto" style="max-width:700px;">
 				<h2 class="text-success mb-3">Contato</h2>
 				<ul class="contato-lista list-unstyled mb-3">
 					<li class="mb-2">
@@ -258,10 +257,13 @@
 					</div>
 					<div class="modal-body text-center">
 						<p>Escaneie o QR Code abaixo ou copie o código Pix:</p>
-						<img src="assets/img/pix.webp" alt="QR Code Pix" style="width: 200px; margin: 15px 0;" />
+						<img src="assets/img/pix.webp" alt="QR Code Pix" class="img-fluid"
+							style="max-width: 200px; margin: 15px 0;" />
 						<input type="text" id="codigoPix" value="SUA CHAVE PIX" readonly
-							class="form-control mb-2 bg-dark text-light" style="width: 90%; display:inline-block;" />
-						<button class="btn btn-outline-success mb-2" onclick="copiarCodigoPix()">Copiar Código
+							class="form-control mb-2 bg-dark text-light"
+							style="width: 100%; max-width: 350px; margin:auto;" />
+						<button class="btn btn-outline-success mb-2 w-100 w-md-auto" onclick="copiarCodigoPix()">Copiar
+							Código
 							Pix</button>
 						<p class="mt-2">Após o pagamento, envie o comprovante para nosso WhatsApp para agilizar o
 							atendimento.</p>

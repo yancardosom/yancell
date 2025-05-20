@@ -45,9 +45,9 @@ nav ul li a:hover {
 }
 
 section {
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
-  padding: 40px 20px;
+  padding: 24px 6px;
 }
 
 h2 {
@@ -59,8 +59,9 @@ h2 {
   background: linear-gradient(120deg, #232526 0%, #2c3e50 100%);
   border-radius: 12px;
   padding: 24px 18px;
-  min-width: 270px;
-  max-width: 320px;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
   flex: 1 1 270px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
   margin-bottom: 0;
@@ -203,7 +204,7 @@ a:hover {
 .home-banner {
   background: linear-gradient(120deg, #232526 0%, #414345 100%);
   border-radius: 16px;
-  padding: 40px 20px;
+  padding: 24px 8px;
   text-align: center;
   margin-bottom: 40px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
@@ -255,7 +256,7 @@ a:hover {
 .sobre-container {
   background: linear-gradient(120deg, #232526 0%, #414345 100%);
   border-radius: 14px;
-  padding: 36px 24px;
+  padding: 18px 6px;
   margin-bottom: 30px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
   color: #e0e0e0;
@@ -292,7 +293,7 @@ a:hover {
 .contato-container {
   background: linear-gradient(120deg, #232526 0%, #414345 100%);
   border-radius: 14px;
-  padding: 36px 24px;
+  padding: 18px 6px;
   margin-bottom: 30px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
   color: #e0e0e0;
@@ -351,18 +352,31 @@ a:hover {
 @media (max-width: 900px) {
   .produto-lista {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 }
 
 @media (max-width: 600px) {
-  .home-banner {
-    padding: 24px 8px;
+  .produto-lista {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
   }
-
+  .produto {
+    padding: 16px 6px;
+  }
+  .carrinho {
+    padding: 12px 4px;
+  }
+  .home-banner {
+    padding: 16px 4px;
+  }
   .sobre-container,
   .contato-container {
-    padding: 18px 6px;
+    padding: 10px 2px;
+  }
+  .modal-content {
+    padding: 0 !important;
   }
 }
 
