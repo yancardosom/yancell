@@ -39,7 +39,9 @@ yancell/
 │   ├── css/
 │   │   └── style.css
 │   ├── img/
+│   │   ├── 1687448014424.jpeg
 │   │   ├── logo.webp
+│   │   ├── favicon.webp
 │   │   └── pix.webp
 │   └── js/
 │       └── script.js
