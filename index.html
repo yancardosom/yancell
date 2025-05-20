@@ -12,44 +12,62 @@
 </head>
 
 <body>
-	<header class="bg-dark text-white text-center py-4">
-		<img src="assets/img/logo.webp" alt="Logo da Yan Cell Assistec" style="width:120px; margin-bottom:0px;"
+	<header class="bg-dark text-white text-center py-4 shadow-sm">
+		<img src="assets/img/logo.webp" alt="Logo da Yan Cell Assistec" style="width:100px; margin-bottom:0px;"
 			class="img-fluid" />
 		<nav>
-			<ul class="nav justify-content-center flex-wrap">
+			<ul class="nav justify-content-center flex-wrap mt-3">
+				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#" onclick="mostrarSecao('home')"><i
+							class="bi bi-house-door-fill"></i> Home</a></li>
 				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
-						onclick="mostrarSecao('home')">Home</a></li>
+						onclick="mostrarSecao('produtos')"><i class="bi bi-bag-fill"></i> Produtos</a></li>
+				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#" onclick="mostrarSecao('sobre')"><i
+							class="bi bi-info-circle-fill"></i> Sobre Nós</a></li>
 				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
-						onclick="mostrarSecao('produtos')">Produtos</a></li>
-				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
-						onclick="mostrarSecao('sobre')">Sobre Nós</a></li>
-				<li class="nav-item"><a class="nav-link text-white fw-bold" href="#"
-						onclick="mostrarSecao('contato')">Contato</a></li>
+						onclick="mostrarSecao('contato')"><i class="bi bi-envelope-fill"></i> Contato</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main class="container-fluid px-1 px-md-3 mt-3 mb-5">
 		<section id="home" class="container-section active">
-			<div class="home-banner card text-center bg-dark text-light p-3 p-md-4 mb-4">
-				<h2 class="mb-3 fs-3 fs-md-2">Bem-vindo à Yan Cell Assistec</h2>
-				<p class="fs-6 fs-md-5">
-					Soluções rápidas e confiáveis para seu smartphone, notebook ou dispositivo Apple.<br>
-					Peças originais, atendimento personalizado e pagamento facilitado.<br>
-					<b>Seu aparelho novo de novo!</b>
-				</p>
-				<button class="btn btn-success btn-lg mt-3 w-100 w-md-auto" onclick="mostrarSecao('produtos')">Ver
-					Produtos & Serviços</button>
+			<div class="hero-banner animated-fadein mb-4">
+				<div class="hero-shape"></div>
+				<div class="hero-banner-content text-center">
+					<h1 class="mb-3 text-white fw-bold">Bem-vindo à Yan Cell Assistec</h1>
+					<p class="fs-5 text-light mb-4">
+						Soluções rápidas e confiáveis para seu <span class="badge bg-success">smartphone</span>, <span
+							class="badge bg-success">notebook</span> ou <span class="badge bg-success">Apple</span>.<br>
+						Peças originais, atendimento personalizado e pagamento facilitado.<br>
+						<b>Seu aparelho novo de novo!</b>
+					</p>
+					<div class="hero-btns d-grid gap-2 d-md-flex justify-content-md-center">
+						<button class="btn btn-primary btn-lg px-4" onclick="mostrarSecao('produtos')">
+							<i class="bi bi-bag-fill me-2"></i>Ver Produtos & Serviços
+						</button>
+						<button class="btn btn-success btn-lg px-4" onclick="mostrarSecao('contato')">
+							<i class="bi bi-whatsapp me-2"></i>Fale Conosco
+						</button>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<section id="produtos" class="container-section">
-			<h2 class="text-center text-success mb-4 fs-4">Nossos Serviços & Produtos</h2>
+			<h2 class="text-center text-success mb-4 fs-3 fw-bold"><i class="bi bi-bag-fill"></i> Nossos Serviços &
+				Produtos</h2>
 			<div class="row g-4">
 				<div class="col-12 col-md-4">
-					<div class="produto card bg-dark text-light h-100">
+					<div class="produto card bg-gradient-custom text-light h-100 card-glow animated-fadein">
 						<div class="card-body">
-							<h3 class="card-title text-success fs-5">Smartphone Android</h3>
+							<h3 class="card-title text-success fs-5 mb-3"><i class="bi bi-android2"></i> Smartphone
+								Android</h3>
+							<div class="mb-2">
+								<span class="badge badge-servico">Diagnóstico</span>
+								<span class="badge badge-servico">Atualização</span>
+								<span class="badge badge-servico">Troca de Peças</span>
+								<span class="badge badge-servico">Orçamento</span>
+							</div>
 							<div class="produto-opcoes mb-2">
 								<div class="form-check">
 									<input class="form-check-input opcao-produto" type="checkbox"
@@ -75,21 +93,29 @@
 								</div>
 							</div>
 							<div class="input-group mb-1 mt-3" style="width: 100%;">
-								<span class="input-group-text bg-success text-white border-success">Quantidade</span>
+								<span class="input-group-text bg-success text-white border-success"><i
+										class="bi bi-plus-circle"></i></span>
 								<input type="number" min="1" value="1"
 									class="form-control produto-quantidade border-success"
 									data-produto="Smartphone Android">
 							</div>
-							<button class="btn btn-success mt-1 produto-adicionar w-100"
-								onclick="adicionarAoCarrinhoMelhorado('Smartphone Android')">Adicionar ao
-								Carrinho</button>
+							<button class="btn btn-success mt-2 produto-adicionar w-100"
+								onclick="adicionarAoCarrinhoMelhorado('Smartphone Android')"><i
+									class="bi bi-cart-plus"></i> Adicionar ao Carrinho</button>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-md-4">
-					<div class="produto card bg-dark text-light h-100">
+					<div class="produto card bg-gradient-custom text-light h-100 card-glow animated-fadein">
 						<div class="card-body">
-							<h3 class="card-title text-success fs-5">Aparelhos Apple</h3>
+							<h3 class="card-title text-success fs-5 mb-3"><i class="bi bi-apple"></i> Aparelhos Apple
+							</h3>
+							<div class="mb-2">
+								<span class="badge badge-servico">Diagnóstico</span>
+								<span class="badge badge-servico">Atualização</span>
+								<span class="badge badge-servico">Troca de Peças</span>
+								<span class="badge badge-servico">Orçamento</span>
+							</div>
 							<div class="produto-opcoes mb-2">
 								<div class="form-check">
 									<input class="form-check-input opcao-produto" type="checkbox"
@@ -113,20 +139,28 @@
 								</div>
 							</div>
 							<div class="input-group mb-1 mt-3" style="width: 100%;">
-								<span class="input-group-text bg-success text-white border-success">Quantidade</span>
+								<span class="input-group-text bg-success text-white border-success"><i
+										class="bi bi-plus-circle"></i></span>
 								<input type="number" min="1" value="1"
 									class="form-control produto-quantidade border-success"
 									data-produto="Aparelhos Apple">
 							</div>
-							<button class="btn btn-success mt-1 produto-adicionar w-100"
-								onclick="adicionarAoCarrinhoMelhorado('Aparelhos Apple')">Adicionar ao Carrinho</button>
+							<button class="btn btn-success mt-2 produto-adicionar w-100"
+								onclick="adicionarAoCarrinhoMelhorado('Aparelhos Apple')"><i
+									class="bi bi-cart-plus"></i> Adicionar ao Carrinho</button>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-md-4">
-					<div class="produto card bg-dark text-light h-100">
+					<div class="produto card bg-gradient-custom text-light h-100 card-glow animated-fadein">
 						<div class="card-body">
-							<h3 class="card-title text-success fs-5">Notebooks</h3>
+							<h3 class="card-title text-success fs-5 mb-3"><i class="bi bi-laptop"></i> Notebooks</h3>
+							<div class="mb-2">
+								<span class="badge badge-servico">Diagnóstico</span>
+								<span class="badge badge-servico">Atualização</span>
+								<span class="badge badge-servico">Pacote Office</span>
+								<span class="badge badge-servico">Orçamento</span>
+							</div>
 							<div class="produto-opcoes mb-2">
 								<div class="form-check">
 									<input class="form-check-input opcao-produto" type="checkbox"
@@ -150,35 +184,38 @@
 								</div>
 							</div>
 							<div class="input-group mb-1 mt-3" style="width: 100%;">
-								<span class="input-group-text bg-success text-white border-success">Quantidade</span>
+								<span class="input-group-text bg-success text-white border-success"><i
+										class="bi bi-plus-circle"></i></span>
 								<input type="number" min="1" value="1"
 									class="form-control produto-quantidade border-success" data-produto="Notebooks">
 							</div>
-							<button class="btn btn-success mt-1 produto-adicionar w-100"
-								onclick="adicionarAoCarrinhoMelhorado('Notebooks')">Adicionar ao Carrinho</button>
+							<button class="btn btn-success mt-2 produto-adicionar w-100"
+								onclick="adicionarAoCarrinhoMelhorado('Notebooks')"><i class="bi bi-cart-plus"></i>
+								Adicionar ao Carrinho</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="carrinho card bg-dark text-light mt-4">
+			<div class="carrinho card bg-dark text-light mt-4 card-glow animated-fadein">
 				<div class="card-body">
-					<h3 class="card-title fs-5">Itens no Carrinho:</h3>
+					<h3 class="card-title fs-5"><i class="bi bi-cart-check-fill"></i> Itens no Carrinho:</h3>
 					<ul id="lista-carrinho" class="mb-3"></ul>
-					<button class="btn btn-outline-danger w-100 w-md-auto" onclick="limparCarrinho()">Limpar
-						Tudo</button>
+					<button class="btn btn-outline-danger w-100 w-md-auto" onclick="limparCarrinho()"><i
+							class="bi bi-trash"></i> Limpar Tudo</button>
 				</div>
 			</div>
 			<div class="text-center mt-4 d-grid gap-2 d-md-flex justify-content-md-center">
-				<button class="btn btn-success btn-lg me-md-2 w-100 w-md-auto" onclick="finalizarPagamento()">Finalizar
-					Pedido via WhatsApp</button>
+				<button class="btn btn-success btn-lg me-md-2 w-100 w-md-auto" onclick="finalizarPagamento()"><i
+						class="bi bi-whatsapp"></i> Finalizar Pedido via WhatsApp</button>
 				<button class="btn btn-primary btn-lg w-100 w-md-auto" data-bs-toggle="modal"
-					data-bs-target="#pixModal">Pagamento via Pix</button>
+					data-bs-target="#pixModal"><i class="bi bi-cash-coin"></i> Pagamento via Pix</button>
 			</div>
 		</section>
 
 		<section id="sobre" class="container-section">
-			<div class="sobre-container card bg-dark text-light p-3 p-md-4 mb-4 mx-auto" style="max-width:700px;">
-				<h2 class="text-success mb-3">Sobre Nós</h2>
+			<div class="sobre-container card bg-dark text-light p-3 p-md-4 mb-4 mx-auto card-glow animated-fadein"
+				style="max-width:700px;">
+				<h2 class="text-success mb-3"><i class="bi bi-info-circle-fill"></i> Sobre Nós</h2>
 				<p>
 					A <b>Yan Cell Assistec</b> nasceu da paixão por tecnologia e do compromisso com o cliente.<br>
 					Somos referência em assistência técnica de celulares, notebooks e dispositivos Apple em Sergipe.<br>
@@ -190,7 +227,7 @@
 					<b>Visão:</b> Ser reconhecida como a melhor assistência técnica da região.<br>
 					<b>Valores:</b> Ética, respeito, inovação e excelência no atendimento.
 				</p>
-				<h3 class="mt-4">Nossa Equipe</h3>
+				<h3 class="mt-4"><i class="bi bi-people-fill"></i> Nossa Equipe</h3>
 				<div class="sobre-equipe d-flex align-items-center gap-3 mt-2">
 					<img src="assets/img/1687448014424.jpeg" alt="Técnico Yan"
 						class="rounded-circle border border-success" style="width:60px;">
@@ -212,8 +249,9 @@
 		</section>
 
 		<section id="contato" class="container-section">
-			<div class="contato-container card bg-dark text-light p-3 p-md-4 mb-4 mx-auto" style="max-width:700px;">
-				<h2 class="text-success mb-3">Contato</h2>
+			<div class="contato-container card bg-dark text-light p-3 p-md-4 mb-4 mx-auto card-glow animated-fadein"
+				style="max-width:700px;">
+				<h2 class="text-success mb-3"><i class="bi bi-envelope-fill"></i> Contato</h2>
 				<ul class="contato-lista list-unstyled mb-3">
 					<li class="mb-2">
 						<i class="bi bi-envelope-fill text-success me-2"></i>
@@ -251,7 +289,8 @@
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content bg-dark text-light">
 					<div class="modal-header border-0">
-						<h3 class="modal-title" id="pixModalLabel">Pagamento via Pix</h3>
+						<h3 class="modal-title" id="pixModalLabel"><i class="bi bi-cash-coin"></i> Pagamento via Pix
+						</h3>
 						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
 							aria-label="Fechar"></button>
 					</div>
@@ -262,9 +301,8 @@
 						<input type="text" id="codigoPix" value="SUA CHAVE PIX" readonly
 							class="form-control mb-2 bg-dark text-light"
 							style="width: 100%; max-width: 350px; margin:auto;" />
-						<button class="btn btn-outline-success mb-2 w-100 w-md-auto" onclick="copiarCodigoPix()">Copiar
-							Código
-							Pix</button>
+						<button class="btn btn-outline-success mb-2 w-100 w-md-auto" onclick="copiarCodigoPix()"><i
+								class="bi bi-clipboard"></i> Copiar Código Pix</button>
 						<p class="mt-2">Após o pagamento, envie o comprovante para nosso WhatsApp para agilizar o
 							atendimento.</p>
 					</div>
@@ -276,10 +314,8 @@
 	<footer class="bg-dark text-center text-light py-3 mt-4 fixed-bottom">
 		<p class="mb-0">&copy; 2025 Yan Cell Assistec. Todos os direitos reservados.</p>
 	</footer>
-
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/script.js"></script>
-
 </body>
 
 </html>

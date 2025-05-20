@@ -9,6 +9,7 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 header {
@@ -393,4 +394,82 @@ a:hover {
 
 .pix-finalizar-container.active {
   display: block;
+}
+
+/* Design extra para destaque */
+.bg-gradient-custom {
+  background: linear-gradient(120deg, #232526 0%, #2c3e50 100%);
+}
+
+.card-glow {
+  box-shadow: 0 4px 32px 0 rgba(44, 204, 64, 0.12), 0 1.5px 8px 0 rgba(44, 204, 64, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-glow:hover {
+  box-shadow: 0 8px 48px 0 rgba(44, 204, 64, 0.22), 0 2px 16px 0 rgba(44, 204, 64, 0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.badge-servico {
+  background: linear-gradient(90deg, #2ecc40 60%, #27ae38 100%);
+  color: #fff;
+  font-size: 0.95em;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
+.animated-fadein {
+  animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Banner */
+.hero-banner {
+  border-radius: 24px;
+  padding: 2.5rem 1rem 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .hero-banner .hero-shape {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: rgba(44, 204, 64, 0.12);
+  border-radius: 50%;
+  z-index: 0;
+} */
+
+.hero-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-btns .btn {
+  min-width: 180px;
+}
+
+@media (max-width: 600px) {
+  .hero-banner {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .hero-banner .hero-shape {
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    right: -20px;
+  }
 }
